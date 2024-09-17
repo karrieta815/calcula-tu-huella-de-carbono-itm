@@ -206,3 +206,174 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+/* Fondo y texto */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(green.png); /* fondo evocando la naturaleza */
+    color: #2e7d32; /* Verde oscuro para el texto principal */
+    margin: 0;
+    padding: 0;
+}
+
+/* Título */
+h1 {
+    background-color: #4caf50; /* Verde fuerte */
+    color: #ffffff; /* Blanco para el texto */
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px 8px 0 0; /* Bordes redondeados superiores */
+}
+
+/* Secciones */
+.section {
+    background-color: #ffffff; /* Fondo blanco para las secciones */
+    margin: 1.5rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo de las etiquetas */
+label {
+    display: block;
+    font-weight: bold;
+    margin: 1rem 0 0.5rem;
+    color: #388e3c; /* Verde medio */
+}
+
+/* Estilo de los selectores */
+select {
+    margin-left: 1rem;
+    padding: 0.5rem;
+    border: 2px solid #a5d6a7; /* Borde verde suave */
+    border-radius: 8px;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    width: 100%;
+    max-width: 300px;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #4caf50; /* Borde más intenso al hacer focus */
+    outline: none;
+}
+
+/* Estilo del botón */
+button {
+    display: block;
+    margin: 2rem auto;
+    padding: 0.75rem 3rem;
+    background-color: #4caf50; /* Botón verde */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388e3c; /* Cambio de color al pasar el mouse */
+}
+
+/* Resultado */
+#resultado {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    color: #ffffff;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    .section {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    button {
+        padding: 0.5rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+function calcularHuella() {
+    // Obtén las respuestas del formulario
+    const transporte = document.querySelector('select[name="transporte"]').value;
+    const tiempoTransporte = document.querySelector('select[name="tiempo_transporte"]').value;
+    const compartirCoche = document.querySelector('select[name="compartir_coche"]').value;
+    const tipoVehiculo = document.querySelector('select[name="tipo_vehiculo"]').value;
+    const combustible = document.querySelector('select[name="combustible"]').value;
+    const caminarBicicleta = document.querySelector('select[name="caminar_bicicleta"]').value;
+
+    const tipoEnergia = document.querySelector('select[name="tipo_energia"]').value;
+    const electrodomesticosBajoConsumo = document.querySelector('select[name="electrodomesticos_bajo_consumo"]').value;
+    const apagasLuces = document.querySelector('select[name="apagas_luces"]').value;
+    const energiasRenovables = document.querySelector('select[name="energias_renovables"]').value;
+
+    const fuenteProteinas = document.querySelector('select[name="fuente_proteinas"]').value;
+    const productosLocales = document.querySelector('select[name="productos_locales"]').value;
+    const frecuenciaCarneRoja = document.querySelector('select[name="frecuencia_carne_roja"]').value;
+    const desperdiciarComida = document.querySelector('select[name="desperdiciar_comida"]').value;
+    const alimentosProcesados = document.querySelector('select[name="alimentos_procesados"]').value;
+    const agua = document.querySelector('select[name="agua"]').value;
+
+    const separarResiduos = document.querySelector('select[name="separar_residuos"]').value;
+    const bolsasReutilizables = document.querySelector('select[name="bolsas_reutilizables"]').value;
+    const compostasResiduos = document.querySelector('select[name="compostas_residuos"]').value;
+
+    const comprasRopa = document.querySelector('select[name="compras_ropa"]').value;
+    const segundaMano = document.querySelector('select[name="segunda_mano"]').value;
+    const productosElectronicos = document.querySelector('select[name="productos_electronicos"]').value;
+    const productosUnUso = document.querySelector('select[name="productos_un_uso"]').value;
+
+    // Aquí se deben implementar las fórmulas y cálculos para determinar la huella de carbono.
+    // Por simplicidad, usaré una fórmula de ejemplo ficticia para demostrar el resultado.
+
+    // Fórmula de ejemplo (esto debería reemplazarse con cálculos reales):
+    let huella = 0;
+    huella += (transporte === 'coche_propio') ? 20 : 0;
+    huella += (tiempoTransporte === '45-1_hora') ? 10 : 0;
+    huella += (compartirCoche === 'no') ? 15 : 0;
+    huella += (combustible === 'gasolina') ? 5 : 0;
+    huella += (caminarBicicleta === 'no') ? 10 : 0;
+
+    huella += (tipoEnergia === 'electricidad') ? 20 : 0;
+    huella += (electrodomesticosBajoConsumo === 'no') ? 15 : 0;
+    huella += (apagasLuces === 'nunca') ? 10 : 0;
+    huella += (energiasRenovables === 'no') ? 5 : 0;
+
+    huella += (fuenteProteinas === 'carne_roja') ? 20 : 0;
+    huella += (productosLocales === 'nunca') ? 15 : 0;
+    huella += (frecuenciaCarneRoja === 'mas_4_veces') ? 20 : 0;
+    huella += (desperdiciarComida === 'a_menudo') ? 10 : 0;
+    huella += (alimentosProcesados === 'a_menudo') ? 5 : 0;
+    huella += (agua === 'embotellada') ? 5 : 0;
+
+    huella += (separarResiduos === 'nunca') ? 10 : 0;
+    huella += (bolsasReutilizables === 'nunca') ? 5 : 0;
+    huella += (compostasResiduos === 'no') ? 5 : 0;
+
+    huella += (comprasRopa === 'a_menudo') ? 10 : 0;
+    huella += (segundaMano === 'nunca') ? 5 : 0;
+    huella += (productosElectronicos === 'a_menudo') ? 15 : 0;
+    huella += (productosUnUso === 'nunca') ? 5 : 0;
+
+    // Convertir el resultado en un porcentaje (esto es solo un ejemplo, ajusta según tus cálculos)
+    let porcentaje = Math.min(100, huella); // Asegúrate de que el porcentaje no supere el 100%
+    let mensaje;
+
+    if (porcentaje > 50) {
+        mensaje = `Tu huella de carbono es alta (${porcentaje}%). Estás generando una cantidad significativa de contaminación y contribuyendo a la extinción de especies. Considera reducir tu impacto mediante cambios en tus hábitos.`;
+    } else if (porcentaje >= 25 && porcentaje <= 45) {
+        mensaje = `Tu huella de carbono es moderada (${porcentaje}%). Estás haciendo algunos esfuerzos, pero aún hay margen para mejorar.`;
+    } else {
+        mensaje = `¡Felicidades! Tu huella de carbono es baja (${porcentaje}%). Estás contribuyendo positivamente al cambio y ayudando a reducir la contaminación y la extinción de especies.`;
+    }
+
+    document.getElementById("resultado").innerText = mensaje;
+}
+
