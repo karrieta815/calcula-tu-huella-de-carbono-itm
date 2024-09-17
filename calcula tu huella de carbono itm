@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Huella de Carbono</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Calculadora de Huella de Carbono</h1>
+
+    <!-- Transporte -->
+    <div class="section">
+        <h2>1. Transporte</h2>
+        <label>¿Cuál es tu principal medio de transporte?
+            <select name="transporte">
+                <option value="pie">A pie</option>
+                <option value="bicicleta">Bicicleta</option>
+                <option value="transporte_publico">Transporte público</option>
+                <option value="coche_propio">Coche propio</option>
+                <option value="moto">Moto</option>
+            </select>
+        </label>
+        <label>¿Cuánto tiempo recorres aproximadamente al día en tu medio de transporte principal?
+            <select name="tiempo_transporte">
+                <option value="15-30">15 a 30 minutos</option>
+                <option value="45-1_hora">45 a 1 hora</option>
+                <option value="3-4_horas">3 a 4 horas</option>
+                <option value="otro">Otro</option>
+            </select>
+        </label>
+        <label>¿Sueles compartir el coche con otras personas cuando te desplazas?
+            <select name="compartir_coche">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+        </label>
+        <label>¿Qué tipo de vehículo utilizas principalmente?
+            <select name="tipo_vehiculo">
+                <option value="carro">Carro</option>
+                <option value="moto">Moto</option>
+                <option value="bicicleta">Bicicleta</option>
+                <option value="pie">A pie</option>
+            </select>
+        </label>
+        <label>¿Qué tipo de combustible utilizas principalmente?
+            <select name="combustible">
+                <option value="electrico">Eléctrico</option>
+                <option value="hibrido">Híbrido</option>
+                <option value="gasolina">Gasolina</option>
+                <option value="diesel">Diésel</option>
+                <option value="Ninguno">Ninguno</option>
+            </select>
+        </label>
+        <label>¿Prefieres caminar o usar la bicicleta para trayectos cortos en lugar de utilizar el coche o la moto?
+            <select name="caminar_bicicleta">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+        </label>
+    </div>
+
+    <!-- Energía -->
+    <div class="section">
+        <h2>2. Energía</h2>
+        <label>¿Qué tipo de energía utilizas en tu hogar?
+            <select name="tipo_energia">
+                <option value="electricidad">Electricidad cableada (EPM)</option>
+                <option value="solar">Paneles solares</option>
+                <option value="eolica">Energía eólica</option>
+            </select>
+        </label>
+        <label>¿Utilizas electrodomésticos de bajo consumo energético?
+            <select name="electrodomesticos_bajo_consumo">
+                <option value="si">Sí</option>
+                <option value="algunos">Algunos</option>
+                <option value="no">No</option>
+            </select>
+        </label>
+        <label>¿Apagas las luces y los aparatos electrónicos cuando no los estás utilizando?
+            <select name="apagas_luces">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+                <option value="nunca">Nunca</option>
+            </select>
+        </label>
+        <label>¿Utilizas energías renovables para calentar agua o cocinar?
+            <select name="energias_renovables">
+                <option value="si">Sí</option>
+                <option value="a_veces">Algunas veces</option>
+                <option value="no">No</option>
+            </select>
+        </label>
+    </div>
+
+    <!-- Alimentación -->
+    <div class="section">
+        <h2>3. Alimentación</h2>
+        <label>¿Cuál es tu principal fuente de proteínas?
+            <select name="fuente_proteinas">
+                <option value="carne_roja">Carne roja</option>
+                <option value="carne_blanca">Carne blanca</option>
+                <option value="pescado">Pescado</option>
+                <option value="legumbres">Legumbres</option>
+            </select>
+        </label>
+        <label>¿Consumes productos locales y de temporada?
+            <select name="productos_locales">
+                <option value="si">Sí</option>
+                <option value="a_veces">A veces</option>
+                <option value="nunca">Nunca</option>
+            </select>
+        </label>
+        <label>¿Cuántas veces a la semana consumes carne roja?
+            <select name="frecuencia_carne_roja">
+                <option value="nunca">Nunca</option>
+                <option value="1-2_veces">1-2 veces</option>
+                <option value="3-4_veces">3-4 veces</option>
+                <option value="mas_4_veces">Más de 4 veces</option>
+            </select>
+        </label>
+        <label>¿Sueles desperdiciar comida?
+            <select name="desperdiciar_comida">
+                <option value="nunca">Nunca</option>
+                <option value="a_veces">A veces</option>
+                <option value="a_menudo">A menudo</option>
+            </select>
+        </label>
+        <label>¿Consumes alimentos procesados y envasados?
+            <select name="alimentos_procesados">
+                <option value="a_menudo">A menudo</option>
+                <option value="a_veces">A veces</option>
+                <option value="raramente">Raramente</option>
+            </select>
+        </label>
+        <label>¿Bebes agua embotellada o del grifo?
+            <select name="agua">
+                <option value="embotellada">Embotellada</option>
+                <option value="grifo">Del grifo</option>
+            </select>
+        </label>
+    </div>
+
+    <!-- Residuos -->
+    <div class="section">
+        <h2>4. Residuos</h2>
+        <label>¿Separas tus residuos en casa para reciclar?
+            <select name="separar_residuos">
+                <option value="siempre">Siempre</option>
+                <option value="a_veces">A veces</option>
+                <option value="nunca">Nunca</option>
+            </select>
+        </label>
+        <label>¿Utilizas bolsas reutilizables para hacer la compra?
+            <select name="bolsas_reutilizables">
+                <option value="siempre">Siempre</option>
+                <option value="a_veces">A veces</option>
+                <option value="nunca">Nunca</option>
+            </select>
+        </label>
+        <label>¿Compostas los residuos orgánicos?
+            <select name="compostas_residuos">
+                <option value="si">Sí</option>
+                <option value="a_veces">A veces</option>
+                <option value="no">No</option>
+            </select>
+        </label>
+    </div>
+
+    <!-- Consumo -->
+    <div class="section">
+        <h2>5. Consumo (Compras)</h2>
+        <label>¿Compras ropa nueva con frecuencia?
+            <select name="compras_ropa">
+                <option value="a_menudo">A menudo</option>
+                <option value="a_veces">A veces</option>
+                <option value="raramente">Raramente</option>
+            </select>
+        </label>
+        <label>¿Prefieres comprar productos de segunda mano o reparar los que ya tienes?
+            <select name="segunda_mano">
+                <option value="a_menudo">A menudo</option>
+                <option value="a_veces">A veces</option>
+                <option value="nunca">Nunca</option>
+            </select>
+        </label>
+        <label>¿Compras productos electrónicos nuevos con frecuencia?
+            <select name="productos_electronicos">
+                <option value="a_menudo">A menudo</option>
+                <option value="a_veces">A veces</option>
+                <option value="raramente">Raramente</option>
+            </select>
+        </label>
+        <label>¿Evitas comprar productos de un solo uso?
+            <select name="productos_un_uso">
+                <option value="siempre">Siempre</option>
+                <option value="a_veces">A veces</option>
+                <option value="nunca">Nunca</option>
+            </select>
+        </label>
+    </div>
+
+    <button type="button" onclick="calcularHuella()">Calcular Huella de Carbono</button>
+    <p id="resultado"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
